@@ -24,7 +24,7 @@ public class Section04_Basics {
 		.then().assertThat().statusCode(200).header("Server", "Apache/2.4.18 (Ubuntu)").body("scope", equalTo("APP"))
 		.extract().response().asString();
 
-		//extracting data from response body
+		//extracting data from response bodyyy
 		System.out.println(res);
 		
 		JsonPath js = new JsonPath(res);

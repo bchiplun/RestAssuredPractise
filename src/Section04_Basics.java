@@ -31,15 +31,15 @@ public class Section04_Basics {
 
 		//extracting data from response bodyyy
 		System.out.println(res);
-		//use defined method to convert string to json
-		JsonPath js = ReusableMethods.rawToJson(res);
+		
+		JsonPath js = new JsonPath(res);
 		
 		String placeId = js.getString("place_id");
 		
 		System.out.println(js.getString("place_id"));
 		
 		
-		//PUT requst to update address for above place_id2
+		//PUT requst to update address for above place_id
 		
 		String newAddress = "70 Summer walk, Ghansoli, Navi Mumbai";
 		given().log().all().header("content-type","application/json").queryParam("key", "qaclick123")

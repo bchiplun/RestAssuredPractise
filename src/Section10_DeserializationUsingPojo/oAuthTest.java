@@ -16,6 +16,7 @@ import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.Api;
 import pojo.GetCourse;
+import pojo.WebAutomation;
 public class oAuthTest {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -77,7 +78,7 @@ String[] courseTitles= { "Selenium Webdriver Java","Cypress","Protractor"};
 		ArrayList<String> a= new ArrayList<String>();
 		
 		
-		List<pojo.WebAutomation> w=gc.getCourses().getWebAutomation();
+		List<WebAutomation> w=gc.getCourses().getWebAutomation();
 		
 		for(int j=0;j<w.size();j++)
 		{
@@ -87,10 +88,6 @@ String[] courseTitles= { "Selenium Webdriver Java","Cypress","Protractor"};
 		List<String> expectedList=	Arrays.asList(courseTitles);
 		
 		Assert.assertTrue(a.equals(expectedList));
-		
-		
-		
-		
 		
 		
 		//System.out.println(response);
